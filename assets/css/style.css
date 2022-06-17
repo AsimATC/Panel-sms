@@ -1,0 +1,256 @@
+:root{
+    --default-transition: 250ms cubic-bezier(.19,.79,.88,.86);
+}
+
+/*===== SMS GÖNDERME SAYFASI =====*/
+.balance__sms{
+    border-top: 4px solid #2187c7;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition:var(--default-transition);
+    -moz-transition:var(--default-transition);
+    -ms-transition:var(--default-transition);
+    -o-transition:var(--default-transition);
+    -webkit-transition:var(--default-transition);
+}
+
+.balance__sms:hover{
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 4px 8px;
+}
+
+.balance__sms .icon{
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    color: #2187c7;
+}
+
+.balance__button{
+    font-size: 1rem;
+    width: 100%;
+    display: inline-block;
+}
+
+.balance_setting{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.balance_setting .balance__sms{
+    padding: .3rem;
+}
+.balance_setting .btn{
+    margin: .5rem 0;
+}
+
+.balance_setting .btn:hover{
+    margin: .5rem 0;
+    color: #000;
+}
+.balance__container{
+    overflow-x: scroll;
+}
+.balance__container::-webkit-scrollbar{
+    height: 6px;
+}
+
+.balance__table{
+    border-top: 4px solid #2187c7;
+}
+
+.balance__table thead th{
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.balance__table thead{
+    border-bottom: 2px solid #00000024 ; 
+}
+.table td{
+    white-space:unset;
+}
+.fa-check{
+    color: #2187c7;;
+}
+/*=== CHECK BOX STYLE START*/
+input.switch {
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+}
+  input.switch:checked::before {
+    background: #2187c7;
+}
+  input.switch::before {
+    font-size: 18px;
+    color: #fff;
+    box-shadow: 0 0 1px 1px #ffffff;
+    content: "✓  ✖";
+    display: block;
+    position: absolute;
+    background: #b9babb;
+    width: 47px;
+    border-radius: 1px;
+    height: 25px;
+    top: -5px;
+    left: 0px;
+    text-align: center;
+}
+  input.switch::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #fff;
+    border-radius: 2px;
+    height: 21px;
+    width: 22px;
+    top: -3px;
+    left: 1px;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    transition: all 300ms;
+}
+  input.switch:active:after {
+    width: 30px;
+}
+  input.switch:checked::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+  input.round.switch::after,
+  input.round.switch::before {
+    border-radius: 20px;
+}
+.modal-button:focus + .modal{
+    opacity: 1;
+    display: inline-block;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #2187c7;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.select {
+    position: relative;
+    margin-bottom: 15px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .select .selectBtn {
+    background: var(--bg1);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: #fff;
+  }
+  .select .selectBtn:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transition: 0.2s ease;
+  }
+  .select .selectBtn.toggle {
+    border-radius: 3px 3px 0 0;
+  }
+  .select .selectBtn.toggle:after {
+    -webkit-transform: translateY(-50%) rotate(-135deg);
+            transform: translateY(-50%) rotate(-135deg);
+  }
+  .select .selectDropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+    background: var(--bg1);
+    border-top: 1px solid #eee;
+    z-index: 1;
+    background: #fff;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    visibility: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+  .select .selectDropdown .option {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .select .selectDropdown .option:hover {
+    background: #f8f8f8;
+  }
+  .select .selectDropdown.toggle {
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  textarea.form-control{
+    border:1px solid #b9babb !important;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+/*=== CHECKBOX STYLE FINIHS*/  
+
+
